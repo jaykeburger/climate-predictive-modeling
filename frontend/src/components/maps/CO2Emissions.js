@@ -13,16 +13,21 @@ const Map = () => {
     Mexico: '#00ff00',
   };
 
-  /*
+  var results = Papa.parse(data);
+  console.log(results);
+  <p>
+    {results}
+  </p>
+  
   function setColor(co2_amount) {
-    if(co2_amount == 0) {}
-    else if(co2_amount > 0) { #FBFCCE }
-    else if(co2_amount > 1000) { #EACA78 }
-    else if(co2_amount > 2000) { #ED9E3F }
-    else if(co2_amount > 3000) { #E35700 }
-    else if(co2_amount > 6000) { #C20000 }
+    if(co2_amount == 0) { return '#FFFFFF'}
+    else if(co2_amount > 0) { return '#FBFCCE' }
+    else if(co2_amount > 1000) { return '#EACA78' }
+    else if(co2_amount > 2000) { return '#ED9E3F' }
+    else if(co2_amount > 3000) { return '#E35700' }
+    else if(co2_amount > 6000) { return '#C20000' }
   }
-*/
+
 
   // Handle country click event
   const handleCountryClick = (country) => {
@@ -42,7 +47,7 @@ const Map = () => {
               ? clickedCountry.color
               : '#ccc'
           }
-          onClick={() => handleCountryClick(country)}
+          onMouseOver={() => handleCountryClick(country)}
         />
       ))}
     </svg>
