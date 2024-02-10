@@ -1,5 +1,6 @@
 import React from 'react'
 import sass from './Navbar.sass'
+import Link from 'react-router'
 
 function NavbarItem(props) {
 	return (
