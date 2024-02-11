@@ -12,9 +12,10 @@ function NavbarItem(props) {
 
 function Navbar() {
   return (
+	
 	  <div className='Navbar'>
-		<NavbarItem link={"/path2"} text="earth"/>
-		  <NavbarItem link={"/"} text="other text"/>
+		<NavbarItem link={"/co2-emissions"} text="CO2 Emissions"/>
+		<NavbarItem link={"/"} text="other text"/>
 		<NavbarItem text="text"/>
 		<NavbarItem text="other text"/>
 
