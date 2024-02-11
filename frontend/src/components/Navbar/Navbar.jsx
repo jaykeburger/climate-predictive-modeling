@@ -12,6 +12,7 @@ function NavbarItem(props) {
 
 function Navbar() {
   return (
+	
 	  <div className='Navbar'>
 		<NavbarItem link={"/path2"} text="earth"/>
 		  <NavbarItem link={"/"} text="other text"/>
