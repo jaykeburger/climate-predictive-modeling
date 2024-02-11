@@ -3,7 +3,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns 
 
-df = pd.read_csv('backend\data\co2emissions-per-capita.csv')
+
+df = pd.read_csv('../data/co2emissions-per-capita.csv')
 df = df.drop('Code', axis=1)
 
 countries_of_interest = ['United States', 'United Kingdom', 'Canada', 'Norway', 'Australia']
