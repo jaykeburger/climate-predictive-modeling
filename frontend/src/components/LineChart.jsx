@@ -34,28 +34,28 @@ function Graph() {
 					<Legend />
 					<Tooltip />
 					<Line
-
 						dataKey="US prediction"
 						stroke="white"
-						activeDot={{ r: 8 }}
+						fillOpacity={0.5}
+						// activeDot={{ r: 8 }}
 					/>
 					<Line
-
 						dataKey="UK prediction"
-						stroke="blue"
-						activeDot={{ r: 8 }}
+						stroke="light blue"
+						fillOpacity={0.5}
+						// activeDot={{ r: 8 }}
 					/>
 					<Line
-
 						dataKey="Canada prediction"
 						stroke="orange"
-						activeDot={{ r: 8 }}
+						fillOpacity={0.5}
+						// activeDot={{ r: 8 }}
 					/>
 					<Line
-
 						dataKey="Norway prediction"
-						stroke="black"
-						activeDot={{ r: 8 }}
+						stroke="pink"
+						fillOpacity={0.5}
+						// activeDot={{ r: 8 }}
 					/>
 				</LineChart>
 			</ResponsiveContainer>
