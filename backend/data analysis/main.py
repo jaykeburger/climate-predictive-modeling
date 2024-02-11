@@ -85,3 +85,11 @@ plt.ylabel('Annual CO2 Emissions')
 plt.title('CO2 Emissions vs Year')
 plt.legend()
 plt.show()
+
+prediction_df = pd.DataFrame({'year': x_range.flatten(),
+                               'US prediction': US_y_range,
+                               'UK prediction': UK_y_range,
+                               'Norway prediction': Norway_y_range,
+                               'Canada prediction': Canada_y_range})
+
+print(prediction_df)
