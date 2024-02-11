@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import map from '../../assets/world.svg';
 /*import data from '../../../../backend/data/2022-metrics-by-country.csv'*/
 import Papa from 'papaparse'
-import map_style from '../../styles/maps.css'
+import map_style from '../../styles/maps.scss'
 
 
 const CO2Emissions = () => {
