@@ -3,39 +3,28 @@ import map from '../../assets/world.svg';
 /*import data from '../../../../backend/data/2022-metrics-by-country.csv'*/
 import Papa from 'papaparse'
 import map_style from '../../styles/maps.scss'
+import constants from '../../_constants.sass'
+import Typewriter from "typewriter-effect";
 
 
 const CO2Emissions = () => {
-  const [clickedCountry, setClickedCountry] = useState(null);
-  const mapData = /* Add your SVG map data here */map;
-  const countryColors = {
-    USA: '#ff0000',
-    Canada: '#ff00ff',
-    Mexico: '#00ff00',
-  };
-    /*
-  var results = Papa.parse(data);
-  console.log(results);
-  <p>
-    {results}
-  </p>
-  */
-  function setColor(co2_amount) {
-    if(co2_amount == 0) { return '#FFFFFF'}
-    else if(co2_amount > 0) { return '#FBFCCE' }
-    else if(co2_amount > 1000) { return '#EACA78' }
-    else if(co2_amount > 2000) { return '#ED9E3F' }
-    else if(co2_amount > 3000) { return '#E35700' }
-    else if(co2_amount > 6000) { return '#C20000' }
-  }
-    // Handle country click event
-  const handleCountryClick = (country) => {
-    const newColor = countryColors[country] || 'lightblue'; // Default color
-    setClickedCountry({ country, color: newColor });
-  };
-  
 return (
 <div>
+
+<h1 style={{color:'#D5F8CE'}}>
+<Typewriter
+            options={{
+                autoStart: true,
+                loop: true,
+                delay: 150
+                }}
+            onInit={(typewriter) => {
+                typewriter
+                .typeString("CO2 Emissions")
+                .start();
+            }}
+            />
+</h1>
 
 <div class="tooltip">Hover over me  
   <span class="tooltiptext">Tooltip text</span>  
