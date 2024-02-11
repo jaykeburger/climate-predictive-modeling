@@ -20,6 +20,8 @@ const Chat = () => {
 	const msgRef = useRef(null);
 	const userId = useRef(Math.random().toString(36).substring(7));
 	const chatPanelRef = useRef(null);
+	const [message, setMessage] = useState('');
+	const [response, setResponse] = useState('');
 
 	const scrollToBottom = () => {
 		chatPanelRef.current?.scrollIntoView({
@@ -58,20 +60,41 @@ const Chat = () => {
 
 	useEffect(scrollToBottom, [log]);
 
-	const handleSubmit = event => {
+	const handleSubmit = async event => {
 		event.preventDefault();
+		console.log('hit');
 
 		if (msgRef.current.value) {
-			const message = msgRef.current.value;
+			const mess = msgRef.current.value;
 			const messageObj = { sender: userId.current, message };
 			appendLog({
 				type: 'message',
-				message: message,
+				message: mess,
+				isOutgoing: true,
 				timestamp: new Date().toLocaleTimeString(),
 			});
-			console.log(message);
+
+			await fetch('http://localhost:5001', {
+				method: 'POST',
+				headers: {
+					'Content-type': 'application/json',
+				},
+				body: JSON.stringify({ mess }),
+			})
+				.then(res => res.json())
+				.then(data => {
+					appendLog({
+						type: 'message',
+						message: data.message,
+						isOutgoing: false,
+						timestamp: new Date().toLocaleTimeString(),
+					});
+					setResponse(data.message)
+				});
+
+		
+			msgRef.current.value = '';
 		}
-		msgRef.current.value = '';
 	};
 
 	return (
