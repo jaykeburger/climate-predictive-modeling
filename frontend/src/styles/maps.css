@@ -1,0 +1,21 @@
+body {
+    background-color: #01171b;
+}
+
+.map-parent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+}
+
+svg path {
+    fill: #C7C7C7;
+    stroke: 0.6s;
+    stroke-width: .25;
+}
+
+svg path:hover {
+    fill: #006284;
+    cursor: pointer;
+}
