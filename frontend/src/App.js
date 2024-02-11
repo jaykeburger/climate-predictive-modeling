@@ -3,8 +3,9 @@ import sass from './styles/App.sass';
 import Navbar from './components/Navbar.jsx';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LandingSite from './components/LandingSite.jsx';
-import CO2Emissions from './components/maps/CO2Emissions.js'
+import CO2Emissions from './components/maps/CO2Emissions.js';
 import Chat from './components/Chat.jsx';
+import Graph from './components/LineChart.jsx';
 
 function App() {
 	return (
@@ -12,14 +13,13 @@ function App() {
 			<Router>
 				<Routes>
 					<Route path="/" element={<LandingSite />} />
-					<Route path="app" element={<Navbar />} />
 					<Route
-						path="app/co2-emissions"
+						path="app"
 						element={
 							<>
-								<Navbar />
-								<CO2Emissions/>
+								<CO2Emissions />
 								<Chat />
+								<Graph/>
 							</>
 						}
 					/>
