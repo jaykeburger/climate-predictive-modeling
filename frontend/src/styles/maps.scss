@@ -1,3 +1,9 @@
+$color_level1:#51d287;
+$color_level2: #46b173;
+$color_level3:#378c5a;
+$color_level4:#173a26;
+$color_level5:#26633f;
+
 body {
     background-color: #01171b;
 }
@@ -12,7 +18,10 @@ body {
 }
 .map-child {
     padding: 3%;
-    background-color: rgba(117, 165, 105, 0.662);
+    background-color: rgba(255, 255, 255, 0.175);
+    background-blend-mode: lighten;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;;
     color: white;
     text-align: center;
     border-radius: 30px; 
@@ -21,31 +30,31 @@ body {
     transform: scale(.6, .6);
 }
 svg path {
-    fill: #7a8693;
+    fill: $color_level1;
     stroke: 0.6s;
     stroke-width: .25;
 }
 
 svg path:hover {
-    fill: #006284;
+    fill: $color_level1;
     cursor: pointer;
 }
 
 
 .United-States {
-    fill: #00f2ff;
+    fill: $color_level5;
 }
 
 .Canada {
-    fill: #0c3d62;
+    fill: $color_level4;
 }
 
 .Australia {
-    fill: #084463;
+    fill: $color_level3;
 }
 
 .United-Kingdom, .Colombia, .Norway, .Libya, .China, .Qatar, .Japan, .Cambodia, .Malaysia {
-    fill: #476daf;
+    fill: $color_level2;
 }
 
 

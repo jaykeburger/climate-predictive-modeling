@@ -1,5 +1,5 @@
 import React from 'react';
-import sass from './LandingSite.sass';
+import sass from '../styles/LandingSite.sass';
 
 function LandingSite() {
 	return (
