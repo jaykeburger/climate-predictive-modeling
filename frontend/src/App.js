@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LandingSite from './components/LandingSite.jsx';
 import CO2Emissions from './components/maps/CO2Emissions.js';
 import Chat from './components/Chat.jsx';
+import Graph from './components/LineChart.jsx';
 
 function App() {
 	return (
@@ -18,6 +19,7 @@ function App() {
 							<>
 								<CO2Emissions />
 								<Chat />
+								<Graph/>
 							</>
 						}
 					/>
