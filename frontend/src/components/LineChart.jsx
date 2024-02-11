@@ -36,13 +36,13 @@ function Graph() {
 					<Line
 						dataKey="US prediction"
 						stroke="white"
-						fillOpacity={0.5}
+						fillOpacity={0.3}
 						// activeDot={{ r: 8 }}
 					/>
 					<Line
 						dataKey="UK prediction"
-						stroke="light blue"
-						fillOpacity={0.5}
+						stroke="yellow"
+						fillOpacity={0.3}
 						// activeDot={{ r: 8 }}
 					/>
 					<Line
@@ -53,8 +53,8 @@ function Graph() {
 					/>
 					<Line
 						dataKey="Norway prediction"
-						stroke="pink"
-						fillOpacity={0.5}
+						stroke="red"
+						fillOpacity={0.2}
 						// activeDot={{ r: 8 }}
 					/>
 				</LineChart>
