@@ -1,9 +1,10 @@
 import logo from './logo.svg';
 import sass from './styles/App.sass';
 import Navbar from './components/Navbar.jsx';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom" 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LandingSite from './components/LandingSite.jsx';
-import CO2Emissions from './components/maps/CO2Emissions';
+import CO2Emissions from './components/maps/CO2Emissions.js'
+import Chat from './components/Chat.jsx';
 
 function App() {
 	return (
@@ -11,8 +12,17 @@ function App() {
 			<Router>
 				<Routes>
 					<Route path="/" element={<LandingSite />} />
-					<Route path="app" element={<Navbar/>} />
-					<Route path="app/co2-emissions" element={<><Navbar/><CO2Emissions/></>} />
+					<Route path="app" element={<Navbar />} />
+					<Route
+						path="app/co2-emissions"
+						element={
+							<>
+								<Navbar />
+								<CO2Emissions/>
+								<Chat />
+							</>
+						}
+					/>
 				</Routes>
 			</Router>
 		</div>

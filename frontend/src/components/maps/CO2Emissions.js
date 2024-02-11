@@ -3,9 +3,7 @@ import map from '../../assets/world.svg';
 /*import data from '../../../../backend/data/2022-metrics-by-country.csv'*/
 import Papa from 'papaparse'
 import map_style from '../../styles/maps.scss'
-import constants from '../../_constants.sass'
 import Typewriter from "typewriter-effect";
-
 
 const CO2Emissions = () => {
 return (
