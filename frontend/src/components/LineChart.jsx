@@ -1,3 +1,4 @@
+import React, {useState} from 'react';
 import {
     LineChart,
     ResponsiveContainer,
@@ -8,19 +9,20 @@ import {
     YAxis,
     CartesianGrid,
 } from 'recharts'
-import axios from 'axios';
 
 
 function Graph() {
-    const predictiondata = async () => {
-        try {
-          const response = await axios.get('prediction_data.json');
-          const data = response.data;
-          // Process the data and proceed to the next steps
-        } catch (error) {
-          console.error('Error fetching data:', error);
-        }
-    }
+    const [predictiondata, setpredictiondata]=useState('')
+    fetch('prediction_data.json')
+        .then(response => response.json())
+        .then(data => {
+            // 'data' now contains the parsed JSON from the file
+            console.log({data});
+            setpredictiondata(data);
+        })
+        .catch(error => {
+            console.error('Error fetching JSON:', error);
+        });
 
     return (
         <>
