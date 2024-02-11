@@ -3,6 +3,7 @@ import map from '../../assets/world.svg';
 import Papa from 'papaparse'
 import map_style from '../../styles/maps.scss'
 import Typewriter from "typewriter-effect";
+import  { useState } from 'react';
 
 const CO2Emissions = () => {
 const [toggle, setToggle] = useState(true)
