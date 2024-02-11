@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns 
 
 
-df = pd.read_csv('../data/co2emissions-per-capita.csv')
+df = pd.read_csv('./data/co2emissions-per-capita.csv')
 df = df.drop('Code', axis=1)
 
 countries_of_interest = ['United States', 'United Kingdom', 'Canada', 'Norway', 'Australia']
@@ -94,4 +94,5 @@ prediction_df = pd.DataFrame({'year': x_range.flatten(),
                                'Canada prediction': Canada_y_range})
 
 print(prediction_df)
-prediction_df.to_json('prediction_data.json', orient='records')
+prediction_df.to_json('../frontend/public/pyOutputs/prediction_data.json', orient='records')
+
