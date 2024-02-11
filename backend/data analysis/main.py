@@ -47,7 +47,7 @@ Norway_y = Norway_df['Annual CO₂ emissions (per capita)'].values
 
 Norway_X_train, Norway_X_test, Norway_y_train, Norway_y_test = train_test_split(Norway_X, Norway_y, test_size=0.2, random_state=42)
 
-degree = 29  # You can adjust the degree of the polynomial
+degree = 19  # You can adjust the degree of the polynomial
 Norway_model = make_pipeline(PolynomialFeatures(degree), LinearRegression())
 Norway_model.fit(Norway_X_train, Norway_y_train)
 
@@ -56,7 +56,7 @@ Canada_y = Canada_df['Annual CO₂ emissions (per capita)'].values
 
 Canada_X_train, Canada_X_test, Canada_y_train, Canada_y_test = train_test_split(Canada_X, Canada_y, test_size=0.2, random_state=42)
 
-degree = 19  # You can adjust the degree of the polynomial
+degree = 4  # You can adjust the degree of the polynomial
 Canada_model = make_pipeline(PolynomialFeatures(degree), LinearRegression())
 Canada_model.fit(Canada_X_train, Canada_y_train)
 
@@ -93,3 +93,4 @@ prediction_df = pd.DataFrame({'year': x_range.flatten(),
                                'Canada prediction': Canada_y_range})
 
 print(prediction_df)
+prediction_df.to_json('prediction_data.json', orient='records')
