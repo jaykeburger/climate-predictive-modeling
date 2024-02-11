@@ -6,9 +6,10 @@ import tensorflow as tf
 import os
 import random
 import seaborn as sns
+import matplotlib.pyplot as plt
 
 # load the data
-path = '/content/annual-co2-emissions-per-country.csv'
+path = '/data/annual-co2-emissions-per-country.csv'
 df  = pd.read_csv(path)
 df = pd.read_csv(path)
 print(df.head())
@@ -43,7 +44,6 @@ plt.grid(True)
 # Show the plot
 plt.show()
 
-import matplotlib.pyplot as plt
 
 # Assuming you want to compare the year 2020
 year_of_interest = 2020
