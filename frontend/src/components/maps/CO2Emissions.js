@@ -8,7 +8,7 @@ import  { useState } from 'react';
 const CO2Emissions = () => {
 const [toggle, setToggle] = useState(true)
 return (
-<div>
+<div style={{color:'#D5F8CE'}}>
 
 <h1 className='title' style={{color:'#D5F8CE'}}>
 <Typewriter
@@ -24,8 +24,70 @@ return (
             }}
             />
 </h1>
+
+<div style={{textAlign:'center', alignItems:'center', marginLeft:'auto', marginRight:'auto'}}>
+  <p>
+    Below is a global map of CO2 for selected Conoco Phillips Locations. Darker shades of green indicate a higher output
+  </p>
+  <p>
+    The predictive model utilizes polynomial regression and the Python library known as scikit learn. As we can see, current projections predict that CO2 output will be decreasing across the board.
+  </p>
+  <h1 style={{color:'#D5F8CE'}}>
+<Typewriter
+            options={{
+                autoStart: true,
+                loop: false,
+                delay: 150
+                }}
+            onInit={(typewriter) => {
+                typewriter
+                .typeString("2022 Data")
+                .start();
+            }}
+            />
+</h1>
+<p>Measured in thousands of tonnes</p>
+  <table style={{textAlign:'center', alignItems:'center', marginLeft:'auto', marginRight:'auto'}}>
+  <tr>
+    <th>Metric</th>
+    <th>U.S.A</th>
+    <th>Canada</th>
+    <th>Norway</th>
+    <th>United Kingdom</th>
+  </tr>
+  <tr>
+    <td>CO2 from operation</td>
+    <td>6,129</td>
+    <td>3,217</td>
+    <td>1,094</td>
+    <td>2,104</td>
+  </tr>
+  <tr>
+    <td>CO2 from Imported Electricity</td>
+    <td>711</td>
+    <td>336</td>
+    <td>14</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>Methane (CO2e)</td>
+    <td>1,593</td>
+    <td>46</td>
+    <td>27</td>
+    <td>28</td>
+  </tr>
+  <tr>
+    <td>Nitrous Oxide (CO2e)</td>
+    <td>8</td>
+    <td>7</td>
+    <td>4</td>
+    <td>2</td>
+  </tr>
+</table>
+  </div>
+
 <div id='container'>
-<input type="button" onClick={() => setToggle(!toggle)} value="Predictive Model" />
+<input type="button" value="Predictive Model" />
   <input type="button" value="COP Map"  onClick={() => setToggle(!toggle)} />
   {toggle && (
     <div id='map-parent'>

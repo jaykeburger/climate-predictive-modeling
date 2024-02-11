@@ -8,6 +8,15 @@ body {
     background-color: #01171b;
 }
 
+table, th, td {
+    text-align: center;
+    border: 1px solid #D5F8CE;
+    border-collapse: collapse;
+  }
+  th {
+    background-color: rgba(255, 255, 255, 0.175);
+  }
+
 input[type=button] {
     width: 250px;  height: 80px;
     margin: 2px;

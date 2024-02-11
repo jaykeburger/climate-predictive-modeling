@@ -1,5 +1,6 @@
 import React from 'react';
 import sass from '../styles/LandingSite.sass';
+import logo from '../assets/Conoco-logo.png'
 
 function LandingSite() {
 	return (
@@ -21,6 +22,9 @@ function LandingSite() {
 				<button className="button" onClick={(()=>document.location = '/app')}>
 					Try it out
 				</button>
+			</div>
+			<div>
+				<img width={230} height={110} src={logo}/>
 			</div>
 		</div>
 	);
