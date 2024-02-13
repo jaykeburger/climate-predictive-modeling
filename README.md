@@ -6,7 +6,7 @@ The program uses a polynomial regression model using Python's Scikit library to 
 
 Our application also features an AI assistant that can answer any questions related to obtaining goals related to sustainability. 
 ![Screenshot 2024-02-13 145303](https://github.com/jaykeburger/climate-predictive-modeling/assets/76579098/e47ce47d-15e2-4f06-8ac1-b685aa10cbde)
+![Screenshot 2024-02-13 145601](https://github.com/jaykeburger/climate-predictive-modeling/assets/76579098/b49dec65-2f58-4a7d-9b21-9e0c567a9a67)
 ![Screenshot 2024-02-13 145326](https://github.com/jaykeburger/climate-predictive-modeling/assets/76579098/25ca13f6-7d19-46da-9f0d-15b541d7acba)
 ![Screenshot 2024-02-13 145457](https://github.com/jaykeburger/climate-predictive-modeling/assets/76579098/1a628302-a2b5-4b12-8001-ae24be824f4e)
 eenshot 2024-02-13 145601.png…]()
-![Screenshot 2024-02-13 145601](https://github.com/jaykeburger/climate-predictive-modeling/assets/76579098/b49dec65-2f58-4a7d-9b21-9e0c567a9a67)
